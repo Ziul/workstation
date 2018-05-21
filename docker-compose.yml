@@ -1,0 +1,17 @@
+version: '3'
+
+# Docker-compose example
+
+services:
+  workstation:
+    build: .
+    volumes:
+      - ./:/root/pc:rw
+    ports:
+      - "22:22" # SSH port
+      - "8080:8080"
+      - "8000:8000"
+      - "5000:5000"
+    hostname: workstation
+    environment:
+      - HOSTNAME=workstation
