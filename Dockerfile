@@ -1,6 +1,6 @@
 FROM python:3-alpine
 
-RUN apk --update add --no-cache openssh zsh git curl vim gcc\
+RUN apk --update add --no-cache openssh zsh git curl vim gcc python3-dev gfortran build-base\
 &&	 sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
 &&	 echo "root:root" | chpasswd \
 && sed -i -e "s/bin\/ash/bin\/zsh/" /etc/passwd \
