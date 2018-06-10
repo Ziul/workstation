@@ -21,7 +21,7 @@ RUN curl https://gitlab.com/snippets/1669065/raw -o ~/.zshrc
 ENV SHELL /bin/zsh
 VOLUME /root/pc
 WORKDIR /root/pc
-SHELL zsh -c
+#SHELL zsh -c
 EXPOSE 22
 EXPOSE 8000
 EXPOSE 8080
