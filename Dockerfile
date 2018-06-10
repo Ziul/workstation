@@ -1,7 +1,7 @@
 FROM python:3-alpine
 LABEL maintainer="ziuloliveira@gmail.com"
 
-RUN apk --update add --no-cache openssh zsh htop iftop git curl vim gcc python3-dev gfortran build-base scipy-build\
+RUN apk --update add --no-cache openssh zsh htop iftop git curl vim gcc python3-dev gfortran build-base\
 &&	 sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
 &&	 echo "root:root" | chpasswd \
 && sed -i -e "s/bin\/ash/bin\/zsh/" /etc/passwd \
